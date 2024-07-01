@@ -63,7 +63,42 @@
       <field type="float" name="steer_fb">Steering angle from OAU.</field>
       <field type="float" name="acc_fb">Acceleration angle from OAU.</field>
       <field type="float" name="ebrake_fb">Electronic Brake angle from OAU.</field>
-      <field type="char" name="hbrake_fb" enum="HYDRAULIC_STATUS">Hydraulic status from OAU.</field>
+      <field type="uint8_t" name="hbrake_fb" enum="HYDRAULIC_STATUS">Hydraulic status from OAU.</field>
     </message>
   </messages>
 </mavlink>
+
+
+<!-- 
+msg_params = {
+ "preamble": 0,
+ "mode": 255,
+ "sta_ref": 244,
+ "str_ref": 244,
+ "yaw_ref": 0,
+ "yaw_rate_ref": 0,
+ "swa": 0,
+ "swar": 0,
+ "reserved0": 0,
+ "reserved1": 0,
+ "reserved2": 0,
+ "reserved3": 0,
+ "speed_ref": 0,
+ "acc_ref": 0,
+ "jerk_ref": 0,
+ "gpa_ref": 0,
+ "ebrake_ref": 0,
+ "hbrake_ref": 0,
+ "reserved4": 0,
+ "reserved5": 0,
+ "reserved6": 0,
+ "gear": 1,
+ "mode_fb": 255,
+ "switch_fb": 75,
+ "steer_fb": 0,
+ "acc_fb": 0,
+ "ebrake_fb":0,
+ "hbrake_fb": 'F'
+ }
+
+ -->
