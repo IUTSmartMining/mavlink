@@ -38,27 +38,6 @@
       <field type="uint8_t" name="mode" enum="CONTROL_MODE">Indicates modes for Autopilot.</field>
       <!-- Refrences -->
       <field type="float[20]" name="references">Steering tire rotation rate ref.</field>
-      <!-- <field type="float" name="sta_ref" units="deg" >Steering tire angle ref. (degrees)</field>
-      <field type="float" name="str_ref" >Steering tire rotation rate ref.</field>
-      <field type="float" name="yaw_ref">Yaw ref.</field>
-      <field type="float" name="yaw_rate_ref" >Yaw rate ref.</field>
-      <field type="float" name="swa" >Steering wheel angle.</field>
-      <field type="float" name="swar">Steering wheel angle rate.</field>
-      <field type="float" name="reserved0" >Reserved.</field>
-      <field type="float" name="reserved1" >Reserved.</field>
-      <field type="float" name="reserved2" >Reserved.</field>
-      <field type="float" name="reserved3" >Reserved.</field>
-      <field type="float" name="speed_ref" units="m/s">Speed ref. (meter/second)</field>
-      <field type="float" name="acc_ref" units="m/s/s">Acceleration ref. (meter/Second^2)</field>
-      <field type="float" name="jerk_ref" >Jerk ref. (meter/Second^3)</field>
-      <field type="float" name="gpa_ref" >Gas pedal Angle ref.</field>
-      <field type="float" name="ebrake_ref" >Electronic Brake pedal angle ref.</field>
-      <field type="float" name="hbrake_ref">Hydraulic Brake pedal angle ref.</field>
-      <field type="float" name="reserved4" >Reserved.</field>
-      <field type="float" name="reserved5" >Reserved.</field>
-      <field type="float" name="reserved6" >Reserved.</field>
-      <field type="uint8_t" name="gear" >Gear.</field> -->
-      <!-- Feedbacks -->
       <field type="uint8_t" name="mode_fb" enum="CONTROL_MODE">Indicates modes come from OAU.</field>
       <field type="uint8_t" name="switch_fb" enum="OAU_SWITCHES">Indicates switch status from OAU.</field>
       <field type="float" name="steer_fb">Steering angle from OAU.</field>
