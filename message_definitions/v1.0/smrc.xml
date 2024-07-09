@@ -2,54 +2,27 @@
 <mavlink>
   <!-- SMRC Autoware-APU message definitions                                     -->
   <!-- https://github.com/IUTSmartMining                               -->
-  <enums>
-    <enum name="CONTROL_MODE">
-      <entry name="MANUAL" value="8"/>
-      <entry name="AUTONOMOUS" value="255"/>
-      <entry name="STREERING_AUTONOMOUS" value="12"/>
-      <entry name="SPEED_AUTONOMOUS" value="123"/>
-      <entry name="REMTO_CONTROL" value="127"/>
-    </enum>
-    <enum name="OAU_SWITCHES">
-      <entry name="GENERATOR_FOREWARD" value="75"/>
-      <entry name="GENERATOR_BACKWARD" value="71"/>
-      <entry name="GENERATOR_NEUTRAL" value="67"/>
-      <entry name="NONE_FORWARD" value="74"/>
-      <entry name="NONE_BACKWARD" value="70"/>
-      <entry name="NONE_NEUTRAL" value="66"/>
-    </enum>
-    <enum name="GEAR_STATUS">
-      <entry name="GEAR_NEUTRAL" value="1"/>
-      <entry name="GEAR_FORWARD" value="2"/>
-      <entry name="GEAR_REVERSE" value="20"/>
-    </enum>
-    <enum name="HYDRAULIC_STATUS">
-      <entry name="FREE" value="70"/>
-      <entry name="ENGAGED" value="69"/>
-      <entry name="MANUAL" value="77"/>
-    </enum>
-  </enums>
   <messages>
-    <message id="11046" name="IPC_DATA">
+    <message id="11047" name="IPC_DATA2">
       <description>Message Frame from Autoware to Autopilot(SMRC)</description>
       <!-- Preamble -->
       <field type="uint32_t" name="preamble">The preamble of payload.</field>
       <!-- Mode -->
-      <field type="uint8_t" name="mode" enum="CONTROL_MODE">Indicates modes for Autopilot.</field>
+      <field type="uint8_t" name="mode">Indicates modes for Autopilot.</field>
       <!-- Refrences -->
-      <field type="float[20]" name="references">Steering tire rotation rate ref.</field>
-      <field type="uint8_t" name="mode_fb" enum="CONTROL_MODE">Indicates modes come from OAU.</field>
-      <field type="uint8_t" name="switch_fb" enum="OAU_SWITCHES">Indicates switch status from OAU.</field>
+      <field type="float[20]" name="refrences">Steering tire rotation rate ref.</field>
+      <field type="uint8_t" name="mode_fb">Indicates modes come from OAU.</field>
+      <field type="uint8_t" name="switch_fb">Indicates switch status from OAU.</field>
       <field type="float" name="steer_fb">Steering angle from OAU.</field>
       <field type="float" name="acc_fb">Acceleration angle from OAU.</field>
       <field type="float" name="ebrake_fb">Electronic Brake angle from OAU.</field>
-      <field type="uint8_t" name="hbrake_fb" enum="HYDRAULIC_STATUS">Hydraulic status from OAU.</field>
+      <field type="uint8_t" name="hbrake_fb">Hydraulic status from OAU.</field>
     </message>
   </messages>
 </mavlink>
 
 
-<!-- 
+<!--
 msg_params = {
  "preamble": 0,
  "mode": 255,
@@ -84,7 +57,7 @@ msg_params = {
  -->
 
 
-<!-- 
+<!--
 msg_params = {
  "preamble": 0,
  "mode": 127,
