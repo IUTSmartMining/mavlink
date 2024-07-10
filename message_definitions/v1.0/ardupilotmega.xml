@@ -1771,5 +1771,19 @@
       <field type="uint16_t" name="MCU_voltage_min" units="mV">MCU voltage minimum</field>
       <field type="uint16_t" name="MCU_voltage_max" units="mV">MCU voltage maximum</field>
     </message>
+
+    <message id="11046" name="IPC_DATA">
+      <description>Transmit values to move actuators for Missile controller.</description>
+      <field type="uint32_t" name="preamble" >Reserved id.</field>
+      <field type="uint8_t" name="mode" >Desired Mode.</field>
+      <field type="float[20]" name="refrences" >Desired Ref Values.</field>
+      <field type="uint8_t" name="oauMode">OAU Feedback.</field>
+      <field type="uint8_t" name="oauSwitches">OAU Feedback.</field>
+      <field type="float" name="oauSteering" units="deg">OAU Feedback.</field>
+      <field type="float" name="oauAcc" units="deg">OAU Feedback.</field>
+      <field type="float" name="oauEBrake" units="deg">OAU Feedback.</field>
+      <field type="uint8_t" name="oauHBrake">OAU Feedback.</field>
+    </message>
+
   </messages>
 </mavlink>

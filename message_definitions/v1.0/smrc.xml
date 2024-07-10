@@ -3,21 +3,36 @@
   <!-- SMRC Autoware-APU message definitions                                     -->
   <!-- https://github.com/IUTSmartMining                               -->
   <messages>
-    <message id="11047" name="IPC_DATA2">
-      <description>Message Frame from Autoware to Autopilot(SMRC)</description>
+    <message id="11046" name="IPC_DATA">
+      <description>Message Frame from IPC to Autopilot(SMRC)</description>
       <!-- Preamble -->
       <field type="uint32_t" name="preamble">The preamble of payload.</field>
-      <!-- Mode -->
-      <field type="uint8_t" name="mode">Indicates modes for Autopilot.</field>
       <!-- Refrences -->
       <field type="float[20]" name="refrences">Steering tire rotation rate ref.</field>
+      <field type="float" name="steer_fb">Steering angle from OAU.</field>
+      <field type="float" name="acc_fb">Acceleration angle from OAU.</field>
+      <field type="float" name="ebrake_fb">Electronic Brake angle from OAU.</field>
+      <!-- Mode -->
+      <field type="uint8_t" name="mode">Indicates modes for Autopilot.</field>
+      <field type="uint8_t" name="mode_fb">Indicates modes come from OAU.</field>
+      <field type="uint8_t" name="switch_fb">Indicates switch status from OAU.</field>
+      <field type="uint8_t" name="hbrake_fb">Hydraulic status from OAU.</field>
+    </message>
+    <!--<message id="11047" name="IPC_DATA2">
+    <description>Message Frame from Autoware to Autopilot(SMRC)</description>  -->
+      <!-- Preamble -->
+<!--       <field type="uint32_t" name="preamble">The preamble of payload.</field> -->
+      <!-- Mode -->
+<!--       <field type="uint8_t" name="mode">Indicates modes for Autopilot.</field> -->
+      <!-- Refrences -->
+    <!--  <field type="float[20]" name="refrences">Steering tire rotation rate ref.</field>
       <field type="uint8_t" name="mode_fb">Indicates modes come from OAU.</field>
       <field type="uint8_t" name="switch_fb">Indicates switch status from OAU.</field>
       <field type="float" name="steer_fb">Steering angle from OAU.</field>
       <field type="float" name="acc_fb">Acceleration angle from OAU.</field>
       <field type="float" name="ebrake_fb">Electronic Brake angle from OAU.</field>
       <field type="uint8_t" name="hbrake_fb">Hydraulic status from OAU.</field>
-    </message>
+    </message>  -->
   </messages>
 </mavlink>
 

@@ -69,7 +69,6 @@
     messages: 52500 - 52599 (< 60000)
     commands: 52500 - 52599 (< 60000)
   -->
-  <include>smrc.xml</include>
 
   <messages/>
 </mavlink>
